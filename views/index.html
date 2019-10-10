@@ -1,37 +1,13 @@
-<!-- This is a static file -->
-<!-- served from your routes in server.js -->
+{% extends "layout.html" %}
 
-<!-- You might want to try something fancier: -->
-<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
-<!-- pug: https://pugjs.org/ -->
-<!-- haml: http://haml.info/ -->
-<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+{% block title %}
+Taft Italian Club
+{% endblock %}
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Taft Italian Club</title>
-    <meta name="description" content="A cool thing made with Glitch">
-    <link id="favicon" rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAAAJFBMVEX///8AkkfgACTfABcAjz56uI/pcXnp6enw7e9wsIbq8fDkaHH5E+83AAABC0lEQVR4nO3QRwHAMBADsEtXFn++IVH/JAiqFvPM0VPWvq+YCp68lfM5ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4+eVkjp6ydvDkAHpg0vWI40jKAAAAAElFTkSuQmCC" type="image/x-icon">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-   
-  </head>
-  <body>
-    <header>
-      <h1>
-        Taft High School's Italian Club 
-      </h1>
-       <link> href="style.css" rel="stylesheet" type="public/style.css"</link>
-    </header>
-
-
-
-    <!-- include the Glitch button to show what the webpage is about and
-          to make it easier for folks to view source and remix -->
-    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
-    <script src="https://button.glitch.me/button.js"></script>
-
-  </body>
-</html>
+{% block body %}
+<div class="text-center">
+  <h1 class="display-4 jumbotron">
+    Taft Italian Club
+  </h1>
+</div>
+{% endblock %}
