@@ -24,12 +24,12 @@ p {
 }
 
 form {
-  margin-bottom: 25px;
+  margin-bottom: 10px;
   padding: 15px;
-  background-color: cyan;
+  background-color: white;
   display: inline-block;
   width: 100%;
-  max-width: 340px;
+  max-width: 10000px;
   border-radius: 3px;
 }
 
