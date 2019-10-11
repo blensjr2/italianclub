@@ -25,8 +25,16 @@ app.get("/", function(request, response) {
   response.render("index.html");
 });
 
+app.get("/home", function(request, response) {
+  response.render("layout.html");
+});
+
 app.get("/register", function(request, response) {
   response.render("registration.html");
+});
+
+app.get("/moreinfo", function(request, response) {
+  response.render("moreinfo.html");
 });
 
 // listen for requests :)
