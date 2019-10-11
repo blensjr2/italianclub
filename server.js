@@ -22,7 +22,7 @@ app.use(express.static("public"));
 
 // http://expressjs.com/en/starter/basic-routing.html
 app.get("/", function(request, response) {
-  response.render("index.html");
+  response.render("mainpage.html");
 });
 
 app.get("/home", function(request, response) {
@@ -36,6 +36,15 @@ app.get("/register", function(request, response) {
 app.get("/moreinfo", function(request, response) {
   response.render("moreinfo.html");
 });
+
+app.get("/calendar", function(request, response) {
+  response.render("calendar.html");
+});
+
+app.get("/mainpage", function(request, response) {
+  response.render("mainpage.html");
+});
+
 
 // listen for requests :)
 const listener = app.listen(process.env.PORT, function() {
