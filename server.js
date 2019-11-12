@@ -33,8 +33,8 @@ app.get("/register", function(request, response) {
   response.render("registration.html");
 });
 
-app.get("/moreinfo", function(request, response) {
-  response.render("moreinfo.html");
+app.get("/contact", function(request, response) {
+  response.render("contact.html");
 });
 
 app.get("/calendar", function(request, response) {
