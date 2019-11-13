@@ -59,9 +59,7 @@ app.post("/register", function(req, res) {
   let why = req.body.why
   
   if (!(email && grade && why)) {
-    res.direct("registration.html", {
-      alert: true;
-    })
+    res.redirect("/registrationError")
   }
   
   var mailOptions = {
@@ -87,6 +85,10 @@ app.post("/register", function(req, res) {
   });
   
   res.redirect("/")
+})
+
+app.get("/registrationError", function(req, res) {
+  res.render("registration.html", {error: true})  
 })
 
 app.get("/contact", function(request, response) {
