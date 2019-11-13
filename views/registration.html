@@ -7,18 +7,18 @@ Italian Club Registration
 {% block body %}
 <div class="text-center">
 <h2>
-  Register here if you would like to be apart of our family!
+  Register here if you would like to be a part of our family!
     <link href="style.css" rel="stylesheet" type="text/css">
 </h2>
 </div>
-<form action="mailto:bllensegrav@cps.edu" method="post" enctype="text/plain" >                                                                         
+<form action="/register" method="post" enctype="text/plain" >                                                                         
   <div class="form-group">
     <label for="exampleFormControlInput1">Email address</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    <input type="email" name="emailAddress" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
   </div>
   <div class="form-group">
     <label for="exampleFormControlSelect1">Grade</label>
-    <select class="form-control" id="exampleFormControlSelect1">
+    <select name="grade" class="form-control" id="exampleFormControlSelect1">
       <option>Seventh Grade</option>
       <option>Eighth Grade</option>
       <option>Freshman</option>
@@ -29,12 +29,12 @@ Italian Club Registration
   </div>
   <div class="form-group">
     <label for="exampleFormControlTextarea1">Why do you want to join? (25-50 words)</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <textarea name="why" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
-  <input type="submit" name="submit" value="Send">
-  <link href="style.css" rel="stylesheet" type="text/css">
-  <div class="text-center">
-    <img src="https://handluggageonly.co.uk/wp-content/uploads/2018/02/Hand-Luggage-Only-8-5.jpg" alt="Beautiful Southern Italy" height="428 px" width="500 px">
-  </div>
+  <input type="submit" name="submit" value="Submit">
 </form>
+
+<div class="text-center">
+  <img src="https://handluggageonly.co.uk/wp-content/uploads/2018/02/Hand-Luggage-Only-8-5.jpg" alt="Beautiful Southern Italy" height="428 px" width="500 px">
+</div>
 {% endblock %}
