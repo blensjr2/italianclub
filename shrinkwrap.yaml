@@ -1,5 +1,6 @@
 dependencies:
   express: 4.16.4
+  nodemailer: 6.3.1
   nunjucks: 3.2.0
 packages:
   /a-sync-waterfall/1.0.1:
@@ -917,6 +918,12 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha1-KzJxhOiZIQEXeyhWP7XnECrNDKk=
+  /nodemailer/6.3.1:
+    dev: false
+    engines:
+      node: '>=6.0.0'
+    resolution:
+      integrity: sha512-j0BsSyaMlyadEDEypK/F+xlne2K5m6wzPYMXS/yxKI0s7jmT1kBx6GEKRVbZmyYfKOsjkeC/TiMVDJBI/w5gMQ==
   /normalize-path/2.1.1:
     dependencies:
       remove-trailing-separator: 1.1.0
@@ -1453,4 +1460,5 @@ shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   express: ^4.16.4
+  nodemailer: ^6.3.1
   nunjucks: ^3.2.0
