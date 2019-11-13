@@ -34,8 +34,8 @@ var nodemailer = require('nodemailer');
 var transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'mikedough213@gmail.com',
-    pass: 'ilziwuebgmpolvrq'
+    user: 'blensjr2@gmail.com',
+    pass: 'aviles23'
   }
 });
 
@@ -54,25 +54,27 @@ app.get("/register", function(request, response) {
 });
 
 app.post("/register", function(req, res) {
-  let email = req.body.emailAddress
+  let email = req.body.email
   let grade = req.body.grade
   let why = req.body.why
   
-  let JSON = {
-    "email": email,
-    "grade": grade,
-    "why": why
+  if (!(email && grade && why)) {
+    res.direct("registration.html", {
+      alert: true;
+    })
   }
   
-  console.log(JSON)
-
   var mailOptions = {
-    from: 'mikedough213@gmail.com',
-    to:   'mikedough213@gmail.com',
+    from: 'blensjr2@gmail.com',
+    to:   'blensjr2@gmail.com',
     subject: 'New Registrant',
-    text: `Email: ${email}\n
-           Grade: ${grade}\n
-           Explanation:\n\t${why}
+    html: `
+            <h1>New Registrant</h1>
+            <ul>
+              <li>Email: ${email}</li>
+              <li>Grade: ${grade}</li>
+              <li>Why: ${why}</li>
+            </ul>
           `
   };
 

@@ -11,10 +11,10 @@ Italian Club Registration
     <link href="style.css" rel="stylesheet" type="text/css">
 </h2>
 </div>
-<form action="/register" method="post" enctype="text/plain" >                                                                         
+<form action="/register" method="post">                                                                         
   <div class="form-group">
     <label for="exampleFormControlInput1">Email address</label>
-    <input type="email" name="emailAddress" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
   </div>
   <div class="form-group">
     <label for="exampleFormControlSelect1">Grade</label>
@@ -31,7 +31,14 @@ Italian Club Registration
     <label for="exampleFormControlTextarea1">Why do you want to join? (25-50 words)</label>
     <textarea name="why" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
+  <div class="form-group">
+    <button class="btn btn-secondary" type="submit">
+      Submit
+    </button>
+  </div>
+  <!--
   <input type="submit" name="submit" value="Submit">
+  -->
 </form>
 
 <div class="text-center">
