@@ -19,10 +19,10 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a id="home" class="nav-item nav-link active" href="home">Home <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="register">Registration</a>
-          <a class="nav-item nav-link" href="calendar">Calendar</a>
-          <a class="nav-item nav-link" href="contact">Contact</a>
+          <a id="home" class="nav-item nav-link" href="home">Home <span class="sr-only">(current)</span></a>
+          <a id="register" class="nav-item nav-link" href="register">Registration</a>
+          <a id="calendar" class="nav-item nav-link" href="calendar">Calendar</a>
+          <a id="contact" class="nav-item nav-link" href="contact">Contact</a>
         </div>
       </div>
     </nav>
@@ -43,9 +43,12 @@
         var splitUrl = url.split("/")
         var length = splitUrl.length
         var currentPage = splitUrl[length - 1]
-        alert(currentPage)
       
+        if (!currentPage) {
+          currentPage = "home"
+        }
       
+        document.getElementById(currentPage).classList.add("active")
     </script>
   
   </body>
