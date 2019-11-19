@@ -48,7 +48,9 @@ app.get("/", function(request, response) {
 });
 
 app.get("/home", function(request, response) {
-  response.render("mainpage.html");
+  response.render("mainpage.html", {
+    fluid: true
+  });
 });
 
 app.get("/register", function(request, response) {

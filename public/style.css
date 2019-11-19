@@ -71,5 +71,10 @@ img {
 }
 
 .container {
-  
+  width: 70%
+}
+
+p {
+  font-size: 20px
+  font-style: bold
 }
