@@ -70,8 +70,12 @@ img {
   padding: 15px
 }
 
-.container {
-  width: 70%
+#register-image {
+  width: 500px;
+}
+
+#contact-image {
+  
 }
 
 p {
