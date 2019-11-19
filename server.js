@@ -46,7 +46,7 @@ app.get("/", function(request, response) {
 });
 
 app.get("/home", function(request, response) {
-  response.render("layout.html");
+  response.render("mainpage.html");
 });
 
 app.get("/register", function(request, response) {
