@@ -27,7 +27,7 @@
       </div>
     </nav>
     
-  <div class="container-fluid">
+  <div class="container{% if fluid %}-fluid{% endif %}">
     {% block body %}{% endblock %}
   </div>
 

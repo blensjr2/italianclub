@@ -42,7 +42,9 @@ var transporter = nodemailer.createTransport({
 
 // http://expressjs.com/en/starter/basic-routing.html
 app.get("/", function(request, response) {
-  response.render("mainpage.html");
+  response.render("mainpage.html", {
+    fluid: true
+  });
 });
 
 app.get("/home", function(request, response) {
