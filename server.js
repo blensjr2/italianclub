@@ -42,19 +42,29 @@ var transporter = nodemailer.createTransport({
 
 // http://expressjs.com/en/starter/basic-routing.html
 app.get("/", function(request, response) {
-  response.render("mainpage.html", {
+  response.render("index.html", {
     fluid: true
   });
 });
 
 app.get("/home", function(request, response) {
-  response.render("mainpage.html", {
-    fluid: true
-  });
+  response.redirect('/')
 });
 
 app.get("/register", function(request, response) {
-  response.render("registration.html");
+  response.render("register.html");
+});
+
+app.get("/registrationError", function(req, res) {
+  res.render("registration.html", {error: true})  
+})
+
+app.get("/contact", function(request, response) {
+  response.render("contact.html");
+});
+
+app.get("/calendar", function(request, response) {
+  response.render("calendar.html");
 });
 
 app.post("/register", function(req, res) {
@@ -91,17 +101,6 @@ app.post("/register", function(req, res) {
   res.redirect("/")
 })
 
-app.get("/registrationError", function(req, res) {
-  res.render("registration.html", {error: true})  
-})
-
-app.get("/contact", function(request, response) {
-  response.render("contact.html");
-});
-
-app.get("/calendar", function(request, response) {
-  response.render("calendar.html");
-});
 
 
 // listen for requests :)
