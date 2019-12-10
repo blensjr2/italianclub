@@ -63,6 +63,10 @@ app.get("/contact", function(request, response) {
   response.render("contact.html");
 });
 
+app.get("/contactError", function(request, response) {
+  response.render("contact.html", {error: true})
+});
+
 app.get("/calendar", function(request, response) {
   response.render("calendar.html");
 });
@@ -74,6 +78,16 @@ app.post("/register", function(req, res) {
   
   if (!(email && grade && why)) {
     res.redirect("/registrationError")
+  }
+  
+  app.post("/contact", function(req, res) {
+  let email = req.body.email
+  let grade = req.body.grade
+  let why = req.body.why
+  let 
+  
+    if (!(email && grade && why)) {
+    res.redirect("/contactError")
   }
   
   var mailOptions = {
