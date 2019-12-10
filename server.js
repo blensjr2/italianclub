@@ -86,8 +86,8 @@ app.post("/register", function(req, res) {
   let LastName = req.body.LastName
   let Subject = req.body.Subject
   let Message = req.body.Message
-  
-    if (!(Email && FirstName && LastName && Subject && Message)){
+           
+    if (!(Email && FirstName && LastName && Subject && Message)) {
     res.redirect("/contactError")
   }
   
