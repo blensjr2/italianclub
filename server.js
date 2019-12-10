@@ -81,12 +81,13 @@ app.post("/register", function(req, res) {
   }
   
   app.post("/contact", function(req, res) {
-  let email = req.body.email
-  let grade = req.body.grade
-  let why = req.body.why
-  let 
+  let Email = req.body.Email
+  let FirstName = req.body.FirstName
+  let LastName = req.body.LastName
+  let Subject = req.body.Subject
+  let Message = req.body.Message
   
-    if (!(email && grade && why)) {
+    if (!(Email && FirstName && LastName && Subject && Message)){
     res.redirect("/contactError")
   }
   
