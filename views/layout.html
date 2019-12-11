@@ -44,9 +44,9 @@
     <div class="container{% if fluid %}-fluid{% endif %}">
       
       {% if error %}
-    <div class="alert alert-warning mb-3" id="alert">
-      You must fill out all parts of the form.  
-    </div>
+        <div class="alert alert-warning mb-3" id="alert">
+          You must fill out all parts of the form.  
+        </div>
       {% endif %}
       
       {% block body %}{% endblock %}
@@ -71,6 +71,10 @@
       
         document.getElementById(currentPage).classList.add("active")
     </script>
+    
+    <script src="/alert.js"></script>
+    
+    <script src="{% block script %}{% endblock %}"></script>
   
   </body>
 </html>

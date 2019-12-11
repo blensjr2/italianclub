@@ -89,7 +89,31 @@ app.post("/register", function(req, res) {
   if (!(email && grade && why)) {
     res.redirect("/registrationError")
   } else {
+    // send email
+    var mailOptions = {
+        from: 'blensjr2@gmail.com',
+        to:   'blensjr2@gmail.com',
+        subject: 'New Registrant',
+        html: `
+                <h1>New Registrant</h1>
+                <ul>
+                  <li>Email: ${email}</li>
+                  <li>Grade: ${grade}</li>
+                  <li>Why: ${why}</li>
+                </ul>
+              `
+      };
+
+      transporter.sendMail(mailOptions, function(error, info){
+        if (error) {
+          console.log(error);
+        } else {
+          console.log('Email sent: ' + info.response);
+        }
+      });
+    
     res.redirect("/")
+    
   }
   
 // here
@@ -111,12 +135,12 @@ app.post("/contact", function(req, res) {
   var mailOptions = {
     from: 'blensjr2@gmail.com',
     to:   'blensjr2@gmail.com',
-    subject: 'New Registrant',
+    subject: '',
     html: `
-            <h1>New Registrant</h1>
+            <h1>Message From Student</h1>
             <ul>
-              <li>Email: ${email}</li>
-              <li>Grade: ${grade}</li>
+              <li>Name: ${FirstName} ${LastName}</li>
+              <li>LastName: ${LastName}</li>
               <li>Why: ${why}</li>
             </ul>
           `
