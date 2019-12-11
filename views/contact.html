@@ -5,15 +5,15 @@ More Info/Contact
 {% endblock %}
 
 {% block body %}
-<img id="contact-image" src="https://tafths.org/ourpages/auto/profiles/689965/TAFTCHI1565026507276.jpg" class="rounded mx-auto d-block" alt="...">
-  
-  {% if error %}
+
+ {% if error %}
     <div class="alert alert-warning mb-3" onclick="display: none;">
       You must fill out all parts of the form.  
     </div>
   {% endif %}
   
-<form>
+<img id="contact-image" src="https://tafths.org/ourpages/auto/profiles/689965/TAFTCHI1565026507276.jpg" class="rounded mx-auto d-block" alt="...">
+<form method="post" action="/contact">
    <div class="row">
     <div class="col">
       <label for="exampleFormControlName1">First Name</label>

@@ -104,6 +104,8 @@ app.post("/contact", function(req, res) {
            
   if (!(Email2 && FirstName && LastName && Subject && Message)) {
     res.redirect("/contactError")
+  } else {
+    res.redirect("/")
   }
   
   var mailOptions = {
