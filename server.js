@@ -129,19 +129,16 @@ app.post("/contact", function(req, res) {
   if (!(Email2 && FirstName && LastName && Subject && Message)) {
     res.redirect("/contactError")
   } else {
-    res.redirect("/")
-  }
   
   var mailOptions = {
     from: 'blensjr2@gmail.com',
     to:   'blensjr2@gmail.com',
-    subject: '',
+    subject: Subject,
     html: `
             <h1>Message From Student</h1>
             <ul>
               <li>Name: ${FirstName} ${LastName}</li>
-              <li>LastName: ${LastName}</li>
-              <li>Why: ${why}</li>
+              <li>Message: ${Message}</li>
             </ul>
           `
   };
@@ -155,6 +152,7 @@ app.post("/contact", function(req, res) {
   });
   
   res.redirect("/")
+  }
 })
 
 
