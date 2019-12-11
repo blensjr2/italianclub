@@ -79,6 +79,9 @@ app.post("/register", function(req, res) {
   if (!(email && grade && why)) {
     res.redirect("/registrationError")
   }
+  
+// here
+});
 
 app.post("/contact", function(req, res) {
   let Email = req.body.Email
