@@ -56,7 +56,7 @@ app.get("/register", function(request, response) {
 });
 
 app.get("/registrationError", function(req, res) {
-  res.render("registration.html", {error: true})  
+  res.render("register.html", {error: true})  
 })
 
 app.get("/contact", function(request, response) {
