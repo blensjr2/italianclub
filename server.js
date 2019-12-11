@@ -55,6 +55,16 @@ app.get("/register", function(request, response) {
   response.render("register.html");
 });
 
+/* This is how you can send an error that reloads the page w/ a message
+  res.redirect("/register?error=true")
+  
+  if (req.query.error) {
+    res.render("register.html", { error: true })
+  } else {
+    res.render("register.html")
+  }
+*/
+
 app.get("/registrationError", function(req, res) {
   res.render("register.html", {error: true})  
 })
@@ -78,6 +88,8 @@ app.post("/register", function(req, res) {
   
   if (!(email && grade && why)) {
     res.redirect("/registrationError")
+  } else {
+    res.redirect("/")
   }
   
 // here
